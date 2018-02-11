@@ -1,0 +1,15 @@
+﻿--------------------------------------------------------------------------------------------------------------------------------
+First 
+enable migrations for a certain context in a certain folder
+Enable-Migrations -ContextTypeName Week2OrdersWithTests.Models.ApplicationDbContext -MigrationsDirectory Migrations/ApplicationMigrations
+Enable-Migrations -ContextTypeName Week2OrdersWithTests.Models.BusinessDBContext -MigrationsDirectory Migrations/BusinessMigrations
+
+--------------------------------------------------------------------------------------------------------------------------------
+Second 
+Add migrations and update database
+
+for a certain migration
+add-Migration -ConfigurationTypeName Week2OrdersWithTests.Migrations.BusinessMigrations.Configuration
+update-database -ConfigurationTypeName Week2OrdersWithTests.Migrations.BusinessMigrations.Configuration
+
+--------------------------------------------------------------------------------------------------------------------------------
